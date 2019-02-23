@@ -9,4 +9,6 @@ TAG="$NAME:$NGINX_VERSION-$OS-$OS_VERSION"
 echo "building: $TAG"
 docker build -t $TAG .
 
+docker push $TAG
+
 docker images | grep nginx
